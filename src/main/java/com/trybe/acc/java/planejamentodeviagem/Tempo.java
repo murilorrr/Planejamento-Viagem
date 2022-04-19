@@ -83,3 +83,6 @@ public class Tempo {
     return origemHorarioLocal.plusHours(this.duracao).format(DateTimeFormatter.ofPattern(formato));
   }
 }
+
+// SRC = https://github.com/tryber/acc-java-01-exercises-planejamento-de-viagem/blob/DiegoDemontier-planejamento-de-viagem/src/main/java/com/trybe/acc/java/planejamentodeviagem/Tempo.java
+// utilização de stream e forma a verificar como uma data está presente no filtro
