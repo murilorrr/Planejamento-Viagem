@@ -1,8 +1,5 @@
 package com.trybe.acc.java.planejamentodeviagem;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 public class Viagem {
   private String embarque;
   private String origem;
