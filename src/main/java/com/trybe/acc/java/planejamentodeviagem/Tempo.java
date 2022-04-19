@@ -77,7 +77,9 @@ public class Tempo {
     int indiceFusoHorarioOrigem = 0;
 
     for (int i = 0; i < fusosHorarios.length; i++) {
-
+      if (ZoneId.of(destino) == ZoneId.of(fusosHorarios[i])) {
+        indiceFusoHorarioOrigem = i;
+      }
     }
 
     String fusoHorarioOrigem = fusosHorarios[indiceFusoHorarioOrigem];

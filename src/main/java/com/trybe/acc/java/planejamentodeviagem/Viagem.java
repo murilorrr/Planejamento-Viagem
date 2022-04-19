@@ -40,12 +40,9 @@ public class Viagem {
   public String retornarInformacaoViagem() {
     Tempo tempoViagem =
         new Tempo(this.embarque, this.origem, this.destino, this.retornarDuracaoVoo());
-    System.out.println(tempoViagem);
-    String stringDeInformaçõesEmbebedadas = "Partida: 22/01/2022 18:30:00\n" +
-    "Origem: Recife\n\n" +
-    "Chegada: 24/01/2022 06:30:00\n" +
-    "Destino: Tokyo\n" +
-    "Atenção: o desembarque em Tokyo será: 24/01/2022 06:30:00 no horário de Tokyo e 23/01/2022 18:30:00 no horário de Recife";
-    return stringDeInformaçõesEmbebedadas;
+    Voo voo = new Voo();
+    String informaçãoVoo = voo.retornarInformacaoVoo(this.embarque, this.origem, tempoViagem.retonarDesembarqueHorarioLocalDestino(), tempoViagem.retonarDesembarqueHorarioLocalOrigem());
+
+        return informaçãoVoo;
   }
 }
