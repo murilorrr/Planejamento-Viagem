@@ -1,8 +1,5 @@
 package com.trybe.acc.java.planejamentodeviagem;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 public class Voo {
   private int velocidadeMediaDoVoo = 700;
   /**
@@ -26,9 +23,8 @@ public class Voo {
         embarque + "\n" +
         "Origem: " + origem + "\n\n" +
         "Chegada: " + desembarque + "\n" +
-        "Destino: "+ destino + "\n";
+        "Destino: "+ destino + "\n\n";
 
-    
       return stringDeInformaçõesEmbebedadas;
   }
 }
