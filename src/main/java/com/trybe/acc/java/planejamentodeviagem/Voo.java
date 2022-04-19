@@ -1,15 +1,15 @@
 package com.trybe.acc.java.planejamentodeviagem;
 
 public class Voo {
-  private int tempoVoo;
-
+  private int velocidadeMediaDoVoo = 700;
   /**
    * Método para retornar tempo de Voo.
    * 
    */
   public int retornarTempoVoo(double distanciaKm) {
 
-    Double duracaoDouble = distanciaKm / 700.0;
+    int duracao = (int) (distanciaKm / velocidadeMediaDoVoo);
+    return duracao;
 
   }
 
@@ -19,6 +19,6 @@ public class Voo {
    */
   public String retornarInformacaoVoo(String embarque, String origem, String desembarque,
       String destino) {
-
+        return "";
   }
 }

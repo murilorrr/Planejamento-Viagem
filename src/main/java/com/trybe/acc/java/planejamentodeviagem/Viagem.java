@@ -5,15 +5,17 @@ public class Viagem {
   private String origem;
   private String destino;
   private double distanciaKm;
-  private int velocidadeMediaHora = 700;
   private Voo voo;
 
   /**
    * Método construtor da classe.
    * 
    */
-  public Viagem() {
-    
+  public Viagem(String embarque,String origem,String destino,double distanciaKm) {
+    this.embarque = embarque;
+    this.origem = origem;
+    this.destino = destino;
+    this.distanciaKm = distanciaKm;
   }
 
   /**

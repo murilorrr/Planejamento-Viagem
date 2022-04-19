@@ -35,11 +35,14 @@ public class Tempo {
 
     String[] fusosHorarios = new String[ZoneId.getAvailableZoneIds().size()];
     ZoneId.getAvailableZoneIds().toArray(fusosHorarios);
+    
 
     int indiceFusoHorarioOrigem = 0;
 
     for (int i = 0; i < fusosHorarios.length; i++) {
-
+      if (ZoneId.of(origem) == ZoneId.of(fusosHorarios[i])) {
+        indiceFusoHorarioOrigem = i;
+      }
     }
 
     String fusoHorarioOrigem = fusosHorarios[indiceFusoHorarioOrigem];
@@ -51,7 +54,9 @@ public class Tempo {
     int indiceFusoHorarioDestino = 0;
 
     for (int i = 0; i < fusosHorarios.length; i++) {
-
+      if (ZoneId.of(destino) == ZoneId.of(fusosHorarios[i])) {
+        indiceFusoHorarioDestino = i;
+      }
     }
 
     String fusoHorarioDestino = fusosHorarios[indiceFusoHorarioDestino];
