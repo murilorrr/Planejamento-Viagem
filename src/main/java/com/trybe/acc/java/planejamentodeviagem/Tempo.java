@@ -49,9 +49,9 @@ public class Tempo {
     ZonedDateTime origemHorarioLocal = this.embarque.atZone(fusoHorarioIdOrigem);
 
     String fusoHorarioDestino = arrayDeFusos.stream()
-    .filter(fuso -> fuso.contains(destino))
-    .collect(Collectors.toList())
-    .get(0);
+        .filter(fuso -> fuso.contains(destino))
+        .collect(Collectors.toList())
+        .get(0);
 
     ZonedDateTime destinoHorarioLocal =
         origemHorarioLocal.withZoneSameInstant(ZoneId.of(fusoHorarioDestino));
@@ -66,16 +66,13 @@ public class Tempo {
   public String retonarDesembarqueHorarioLocalOrigem() {
     String[] fusosHorarios = new String[ZoneId.getAvailableZoneIds().size()];
     ZoneId.getAvailableZoneIds().toArray(fusosHorarios);
+    List<String> arrayDeFusos = List.of(fusosHorarios);
 
-    int indiceFusoHorarioOrigem = 0;
+    
 
-    for (int i = 0; i < fusosHorarios.length; i++) {
-      if (fusosHorarios[i].equals(origem)) {
-        indiceFusoHorarioOrigem = i;
-      }
-    }
-
-    String fusoHorarioOrigem = fusosHorarios[indiceFusoHorarioOrigem];
+    String fusoHorarioOrigem = arrayDeFusos.stream().filter(fuso -> fuso.contains(origem))
+        .collect(Collectors.toList())
+        .get(0);
     ZoneId fusoHorarioIdOrigem = ZoneId.of(fusoHorarioOrigem);
 
     ZonedDateTime origemHorarioLocal = this.embarque.atZone(fusoHorarioIdOrigem);
