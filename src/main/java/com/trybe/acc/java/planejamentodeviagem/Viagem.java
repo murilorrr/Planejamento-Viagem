@@ -1,5 +1,8 @@
 package com.trybe.acc.java.planejamentodeviagem;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class Viagem {
   private String embarque;
   private String origem;
@@ -41,8 +44,16 @@ public class Viagem {
     Tempo tempoViagem =
         new Tempo(this.embarque, this.origem, this.destino, this.retornarDuracaoVoo());
     Voo voo = new Voo();
-    String informaçãoVoo = voo.retornarInformacaoVoo(this.embarque, this.origem, tempoViagem.retonarDesembarqueHorarioLocalDestino(), tempoViagem.retonarDesembarqueHorarioLocalOrigem());
+    String pattern = "DD/MM/YYYY HH:mm:ss";
+    DateTimeFormatter formatadorData = DateTimeFormatter.ofPattern(pattern);
 
-        return informaçãoVoo;
+    String informaçãoVoo = voo.retornarInformacaoVoo(this.embarque, this.origem, tempoViagem.retonarDesembarqueHorarioLocalDestino(), tempoViagem.retonarDesembarqueHorarioLocalOrigem());
+    String AtencaoDesembarqueHorarioLocalDestinoEOrigem = 
+    "Atenção: o desembarque em "+ this.destino +
+    "será: " + formatadorData.format(LocalDateTime.parse(tempoViagem.retonarDesembarqueHorarioLocalDestino())) +
+    " no horário de "+ this.destino +
+    " e "+ formatadorData.format(LocalDateTime.parse(tempoViagem.retonarDesembarqueHorarioLocalOrigem())) +
+    " no horário de " + this.origem;
+        return informaçãoVoo + AtencaoDesembarqueHorarioLocalDestinoEOrigem;
   }
 }
