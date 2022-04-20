@@ -2,6 +2,7 @@ package com.trybe.acc.java.planejamentodeviagem;
 
 public class Voo {
   private int velocidadeMediaDoVoo = 700;
+
   /**
    * Método para retornar tempo de Voo.
    * 
