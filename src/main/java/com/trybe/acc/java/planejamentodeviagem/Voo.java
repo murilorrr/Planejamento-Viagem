@@ -21,7 +21,7 @@ public class Voo {
       String destino) {
         String stringDeInformaçõesEmbebedadas = "Partida: " +
         embarque + "\n" +
-        "Origem: " + origem + "\n\n" +
+        "Origem:  " + origem + "\n\n" +
         "Chegada: " + desembarque + "\n" +
         "Destino: "+ destino + "\n\n";
 
