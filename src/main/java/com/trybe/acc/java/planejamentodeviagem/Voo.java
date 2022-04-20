@@ -7,10 +7,9 @@ public class Voo {
    * 
    */
   public int retornarTempoVoo(double distanciaKm) {
-
     int duracao = (int) (distanciaKm / velocidadeMediaDoVoo);
-    return duracao;
 
+    return duracao;
   }
 
   /**
@@ -19,12 +18,12 @@ public class Voo {
    */
   public String retornarInformacaoVoo(String embarque, String origem, String desembarque,
       String destino) {
-        String stringDeInformaçõesEmbebedadas = "Partida: " +
-        embarque + "\n" +
-        "Origem: " + origem + "\n\n" +
-        "Chegada: " + desembarque + "\n" +
-        "Destino: "+ destino + "\n\n";
+        String stringDeInformaçõesEmbebedadas = "Partida: "
+        + embarque + "\n"
+        + "Origem: " + origem + "\n\n"
+        + "Chegada: " + desembarque + "\n"
+        + "Destino: " + destino + "\n\n";
 
-      return stringDeInformaçõesEmbebedadas;
+    return stringDeInformaçõesEmbebedadas;
   }
 }
