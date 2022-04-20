@@ -45,12 +45,12 @@ public class Viagem {
     String informacaoVoo = voo.retornarInformacaoVoo(this.embarque, this.origem,
         tempoViagem.retonarDesembarqueHorarioLocalDestino(),
         tempoViagem.retonarDesembarqueHorarioLocalOrigem());
-    String AtencaoDesembarqueHorarioLocalDestinoEOrigem =
-        "Atenção: o desembarque em "+ this.destino
+    String atencaoDesembarqueHorarioLocalDestinoEOrigem =
+        "Atenção: o desembarque em " + this.destino
         + "será: " + tempoViagem.retonarDesembarqueHorarioLocalDestino()
         + " no horário de " + this.destino
-        + " e "+ tempoViagem.retonarDesembarqueHorarioLocalOrigem() 
+        + " e " + tempoViagem.retonarDesembarqueHorarioLocalOrigem() 
         + " no horário de " + this.origem;
-    return informacaoVoo + AtencaoDesembarqueHorarioLocalDestinoEOrigem;
+    return informacaoVoo + atencaoDesembarqueHorarioLocalDestinoEOrigem;
   }
 }
